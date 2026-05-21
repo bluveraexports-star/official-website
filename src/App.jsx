@@ -57,8 +57,9 @@ function App() {
     return product.name.toLowerCase().includes(query.toLowerCase()) ? product : null;
   }, [query]);
 
-  const whatsappLink = 'https://wa.me/919739541463?text=Hello%20Bluvera%20Exports%2C%20I%20need%20a%20quote%20for%20Ashwagandha.';
-  const inquiryLink = `https://wa.me/919739541463?text=${encodeURIComponent('Hello Bluvera Exports, I need a quote for Premium Ayurvedic raw materials exporter from India.')}`;
+  const quoteMessage = 'Hello Bluvera Exports, I need a quote for Premium Ayurvedic raw materials.';
+  const whatsappLink = `https://wa.me/919739541463?text=${encodeURIComponent(quoteMessage)}`;
+  const inquiryLink = `https://wa.me/919739541463?text=${encodeURIComponent(quoteMessage)}`;
 
   // Parallax & pointer interaction for hero visual (with JSDoc types to satisfy checker)
   /** @type {import('react').MutableRefObject<HTMLDivElement|null>} */
