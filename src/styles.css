@@ -517,20 +517,33 @@ main { position: relative; z-index: 1; }
   position: fixed;
   right: 18px;
   z-index: 60;
-  padding: 14px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0 16px;
   border-radius: 999px;
   font-weight: 800;
+  overflow: hidden;
   box-shadow: var(--shadow);
 }
 .cta-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
   flex: 0 0 auto;
 }
-.cta-label { display: inline; }
+.cta-icon-message { transform: translateY(-1px); }
+.cta-icon-whatsapp { transform: translateY(0); }
+.cta-label {
+  display: none;
+  white-space: nowrap;
+  line-height: 1;
+}
 .float-quote {
-  bottom: 90px;
+  bottom: 92px;
   background: linear-gradient(135deg, #2f7a32 0%, #3a8d3b 100%);
   color: #fff;
 }
@@ -538,6 +551,18 @@ main { position: relative; z-index: 1; }
   bottom: 20px;
   background: #25d366;
   color: #fff;
+}
+
+@media (hover: hover) and (min-width: 721px) {
+  .float-quote,
+  .wa-stick {
+    width: auto;
+  }
+
+  .float-quote .cta-label,
+  .wa-stick .cta-label {
+    display: inline;
+  }
 }
 
 @keyframes floatUp {
@@ -701,8 +726,8 @@ main { position: relative; z-index: 1; }
   }
   .float-quote .cta-icon,
   .wa-stick .cta-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
   .float-quote { bottom: 82px; }
   .wa-stick { bottom: 16px; }
