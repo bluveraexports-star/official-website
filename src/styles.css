@@ -58,6 +58,21 @@ img { max-width: 100%; display: block; }
   gap: 18px;
   padding: 14px 0;
 }
+.brand-text {
+  color: var(--blue);
+  font-weight: 900;
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+.brand img,
+.brand .logo { background: transparent; border-radius: 8px; }
+.footer-brand-text {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+.footer-about img { height: 54px; background: transparent; border-radius: 8px; }
 .logo { height: 54px; width: auto; }
 .menu-toggle {
   display: none;
@@ -604,6 +619,7 @@ main { position: relative; z-index: 1; }
     min-height: 96px;
   }
   .logo { height: 40px; }
+  .brand-text { color: #fff; }
   .menu-toggle { display: inline-flex; margin-left: auto; }
   .main-nav {
     display: none;

@@ -197,7 +197,7 @@ function App() {
             
             <span className="eyebrow">Premium Ayurvedic raw materials exporter from India</span>
             <h1>
-                Bluvera Exports 
+                Premium Ayurvedic raw materials 
               <span className="accent">Exporter from India</span>
             </h1>
             <p>Supplying high-quality herbs, powders, and extracts to global pharmaceutical, nutraceutical, cosmetic and food industries.</p>
@@ -209,7 +209,7 @@ function App() {
           <div className="hero-visual" ref={heroRef}>
             <div className="product-float product-float-a" />
             <div className="product-float product-float-b" />
-            <img src="/logo.jpg" alt="Ayurvedic herbs" className="hero-image" />
+            <img src="/hero.jpg" alt="Ayurvedic herbs" className="hero-image" />
             <div className="hero-badge">Export ready today</div>
           </div>
         </section>
@@ -353,7 +353,7 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-about">
-            <img src="/logo.jpg" alt="Bluvera Exports" />
+            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" />
             <p>Premium supplier of Ayurvedic raw materials from India. Delivering nature's finest to global buyers.</p>
           </div>
           <div className="footer-links">
