@@ -58,14 +58,15 @@ img { max-width: 100%; display: block; }
   gap: 18px;
   padding: 14px 0;
 }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img,
+.brand .logo { background: transparent; border-radius: 8px; }
 .brand-text {
   color: var(--blue);
   font-weight: 900;
   font-size: 1.08rem;
   letter-spacing: -0.02em;
 }
-.brand img,
-.brand .logo { background: transparent; border-radius: 8px; }
 .footer-brand-text {
   color: #fff;
   font-weight: 900;
@@ -73,7 +74,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
 }
 .footer-about img { height: 54px; background: transparent; border-radius: 8px; }
-.logo { height: 54px; width: auto; }
+.logo { height: 54px; max-height: 54px; width: auto; object-fit: contain; }
 .menu-toggle {
   display: none;
   width: 52px;
@@ -202,6 +203,21 @@ main { position: relative; z-index: 1; }
   gap: 8px;
   color: var(--blue);
   font-weight: 700;
+}
+.hero-feature-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.hero-feature-strip span {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(31, 58, 95, 0.1);
+  box-shadow: 0 10px 22px rgba(10, 24, 45, 0.08);
+  color: var(--blue);
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
 
 .hero-visual {
@@ -609,18 +625,32 @@ main { position: relative; z-index: 1; }
 @media (max-width: 720px) {
   .container { width: min(100% - 24px, 1180px); }
   .site-header {
-    background: #5ca57b;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    background: transparent;
+    backdrop-filter: none;
     border-bottom: 0;
+    box-shadow: none;
   }
   .header-inner {
     position: relative;
     flex-wrap: wrap;
-    padding: 14px 0;
-    min-height: 96px;
+    padding: 0;
+    min-height: 0;
   }
-  .logo { height: 40px; }
+  .brand { align-self: flex-start; }
+  .logo { height: 40px; max-height: 40px; }
   .brand-text { color: #fff; }
   .menu-toggle { display: inline-flex; margin-left: auto; }
+  /* Make the hamburger visible on light/transparent header without adding a green box */
+  .menu-toggle {
+    background: rgba(0,0,0,0);
+    padding: 6px 8px;
+    border-radius: 10px;
+  }
+  .menu-toggle span { background: #0b2b45; }
   .main-nav {
     display: none;
     width: 100%;
@@ -644,14 +674,14 @@ main { position: relative; z-index: 1; }
   }
   .btn-cta.pulse { display: none; }
   .hero {
-    padding: 0 0 24px;
+    padding: 0 0 64px;
     gap: 0;
     grid-template-columns: 1fr;
     min-height: auto;
   }
   .hero-copy {
     order: 2;
-    margin-top: -24px;
+    margin-top: 0;
     padding: 0 4px 12px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.98));
     border-radius: 24px 24px 0 0;
@@ -659,13 +689,20 @@ main { position: relative; z-index: 1; }
   .hero-visual {
     order: 1;
     min-height: 0;
+    margin-bottom: 18px;
+    padding: 14px 14px 16px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(58, 141, 59, 0.18), rgba(31, 58, 95, 0.08));
+    border: 1px solid rgba(58, 141, 59, 0.16);
+    box-shadow: 0 18px 34px rgba(10, 24, 45, 0.12);
   }
   .hero-image {
     width: 100%;
-    min-height: 240px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 0;
+    height: auto;
+    max-height: 48vh;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
     box-shadow: none;
   }
   .hero-badge,
@@ -685,6 +722,10 @@ main { position: relative; z-index: 1; }
   }
   .hero-ctas {
     justify-content: center;
+  }
+  .hero-feature-strip {
+    grid-template-columns: 1fr;
+    margin-top: 14px;
   }
   .main-nav.open a + a {
     margin-top: 2px;

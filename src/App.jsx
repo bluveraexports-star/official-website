@@ -205,6 +205,7 @@ function App() {
               <a className="btn btn-cta" href="#enquiry">Request a Quote</a>
               <a className="btn btn-outline" href="#products">View Products</a>
             </div>
+            
           </div>
           <div className="hero-visual" ref={heroRef}>
             <div className="product-float product-float-a" />
