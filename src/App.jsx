@@ -8,8 +8,6 @@ const product = {
 
 const categories = [
   { name: 'Whole Herbs', image: '/Whole Herbs.png' },
-  { name: 'Herbal Powders', image: '/Herbal Powders.jpg' },
-  { name: 'Herbal Extracts', image: '/Herbal Extracts.jpg' },
   { name: 'Seeds & Roots', image: '/Seeds & Roots.jpg' },
 ];
 const markets = ['UAE', 'USA', 'Germany', 'Southeast Asia'];
@@ -60,7 +58,7 @@ function App() {
   }, [query]);
 
   const whatsappLink = 'https://wa.me/919739541463?text=Hello%20Bluvera%20Exports%2C%20I%20need%20a%20quote%20for%20Ashwagandha.';
-  const inquiryLink = `https://wa.me/919739541463?text=${encodeURIComponent('Hello Bluvera Exports, I need a quote for Ashwagandha.')}`;
+  const inquiryLink = `https://wa.me/919739541463?text=${encodeURIComponent('Hello Bluvera Exports, I need a quote for Premium Ayurvedic raw materials exporter from India.')}`;
 
   // Parallax & pointer interaction for hero visual (with JSDoc types to satisfy checker)
   /** @type {import('react').MutableRefObject<HTMLDivElement|null>} */
@@ -195,10 +193,10 @@ function App() {
       <main>
         <section id="home" className={`hero container ${visible.has('hero') ? 'is-visible' : ''}`} data-reveal="hero">
           <div className="hero-copy">
-            <div className="brand-highlight">Bluvera Exports</div>
+            
             <span className="eyebrow">Premium Ayurvedic raw materials exporter from India</span>
             <h1>
-              Premium Ayurvedic Raw Materials
+                Bluvera Exports 
               <span className="accent">Exporter from India</span>
             </h1>
             <p>Supplying high-quality herbs, powders, and extracts to global pharmaceutical, nutraceutical, cosmetic and food industries.</p>
@@ -206,16 +204,11 @@ function App() {
               <a className="btn btn-cta" href="#enquiry">Request a Quote</a>
               <a className="btn btn-outline" href="#products">View Products</a>
             </div>
-            <div className="hero-meta">
-              <div>India</div>
-              <div>SF-208, 2nd Floor, D Block</div>
-              <div>Greenaly Signature, Bengaluru, Karnataka - 560076</div>
-            </div>
           </div>
           <div className="hero-visual" ref={heroRef}>
             <div className="product-float product-float-a" />
             <div className="product-float product-float-b" />
-            <img src="/hero.jpg" alt="Ayurvedic herbs" className="hero-image" />
+            <img src="/logo.jpg" alt="Ayurvedic herbs" className="hero-image" />
             <div className="hero-badge">Export ready today</div>
           </div>
         </section>
@@ -311,14 +304,6 @@ function App() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className={`section container catalog-band ${visible.has('catalog') ? 'is-visible' : ''}`} data-reveal="catalog">
-          <div>
-            <h2>Download Our Product Catalog</h2>
-            <p>Product details, certifications, and export highlights are included in the PDF.</p>
-          </div>
-          <a className="btn btn-light" href="/catalog.pdf" download>Download PDF</a>
         </section>
 
         <section id="enquiry" className={`section container enquiry-grid ${visible.has('enquiry') ? 'is-visible' : ''}`} data-reveal="enquiry">
