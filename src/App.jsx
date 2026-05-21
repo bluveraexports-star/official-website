@@ -2,22 +2,22 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 const product = {
   name: 'Ashwagandha',
-  image: 'assets/Ashwagandha.jpg',
+  image: '/Ashwagandha.jpg',
   spec: 'Root cuts or powder available. Batch specs and COA on request.',
 };
 
 const categories = [
-  { name: 'Whole Herbs', image: 'assets/Whole Herbs.png' },
-  { name: 'Herbal Powders', image: 'assets/Herbal Powders.jpg' },
-  { name: 'Herbal Extracts', image: 'assets/Herbal Extracts.jpg' },
-  { name: 'Seeds & Roots', image: 'assets/Seeds & Roots.jpg' },
+  { name: 'Whole Herbs', image: '/Whole Herbs.png' },
+  { name: 'Herbal Powders', image: '/Herbal Powders.jpg' },
+  { name: 'Herbal Extracts', image: '/Herbal Extracts.jpg' },
+  { name: 'Seeds & Roots', image: '/Seeds & Roots.jpg' },
 ];
 const markets = ['UAE', 'USA', 'Germany', 'Southeast Asia'];
 const certifications = [
-  { name: 'FSSAI', image: 'assets/FSSAI.png', detail: 'Food safety compliant' },
-  { name: 'GST', image: 'assets/GST.png', detail: 'Registered exporter' },
-  { name: 'ISO', image: 'assets/ISO.jpg', detail: 'Quality process ready' },
-  { name: 'COA Available', image: 'assets/COA Available.jpg', detail: 'Batch-wise analysis' },
+  { name: 'FSSAI', image: '/FSSAI.png', detail: 'Food safety compliant' },
+  { name: 'GST', image: '/GST.png', detail: 'Registered exporter' },
+  { name: 'ISO', image: '/ISO.jpg', detail: 'Quality process ready' },
+  { name: 'COA Available', image: '/COA Available.jpg', detail: 'Batch-wise analysis' },
 ];
 const trustPoints = ['ISO / GST Certified', 'Export Quality Assured', 'Bulk Supply', 'Global Shipping'];
 const companyEmail = 'bluveraexports@gmail.com';
@@ -167,7 +167,7 @@ function App() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#home" aria-label="Bluvera Exports home">
-            <img src="assets/logo.jpg" alt="Bluvera Exports" className="logo" />
+            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" />
           </a>
           <button
             className="menu-toggle"
@@ -215,7 +215,7 @@ function App() {
           <div className="hero-visual" ref={heroRef}>
             <div className="product-float product-float-a" />
             <div className="product-float product-float-b" />
-            <img src="assets/hero.jpg" alt="Ayurvedic herbs" className="hero-image" />
+            <img src="/hero.jpg" alt="Ayurvedic herbs" className="hero-image" />
             <div className="hero-badge">Export ready today</div>
           </div>
         </section>
@@ -245,7 +245,7 @@ function App() {
 
         <section id="about" className={`section container split ${visible.has('about') ? 'is-visible' : ''}`} data-reveal="about">
           <div className="split-media">
-            <img src="assets/farm.jpg" alt="Herbal farm" />
+            <img src="/farm.jpg" alt="Herbal farm" />
           </div>
           <div className="split-copy">
             <div className="section-head left">
@@ -318,7 +318,7 @@ function App() {
             <h2>Download Our Product Catalog</h2>
             <p>Product details, certifications, and export highlights are included in the PDF.</p>
           </div>
-          <a className="btn btn-light" href="assets/catalog.pdf" download>Download PDF</a>
+          <a className="btn btn-light" href="/catalog.pdf" download>Download PDF</a>
         </section>
 
         <section id="enquiry" className={`section container enquiry-grid ${visible.has('enquiry') ? 'is-visible' : ''}`} data-reveal="enquiry">
@@ -367,7 +367,7 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-about">
-            <img src="assets/logo.jpg" alt="Bluvera Exports" />
+            <img src="/logo.jpg" alt="Bluvera Exports" />
             <p>Premium supplier of Ayurvedic raw materials from India. Delivering nature's finest to global buyers.</p>
           </div>
           <div className="footer-links">
