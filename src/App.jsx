@@ -386,8 +386,16 @@ function App() {
         </div>
       </footer>
 
-      <a className="float-quote" href="#enquiry">Request Quote</a>
-      <a className="wa-stick" href={whatsappLink} target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+      <a className="float-quote" href="#enquiry" aria-label="Request Quote">
+        <svg className="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 3h9l3 3v15H6V3Zm8 1.5V7h2.5L14 4.5ZM8 10h8v1.8H8V10Zm0 3.6h8v1.8H8v-1.8Zm0 3.6h5.5V19H8v-1.8Z" />
+        </svg>
+        <span className="cta-label">Request Quote</span>
+      </a>
+      <a className="wa-stick" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+        <svg className="cta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.52 14.86L2 22l5.32-1.4A10 10 0 1 0 12 2Zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.16.83.85-3.07-.2-.32A8.1 8.1 0 1 1 12 20.1Zm4.7-5.25c-.25-.12-1.48-.73-1.7-.81-.23-.09-.4-.12-.57.12s-.66.81-.81.98-.3.18-.55.06a6.6 6.6 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.67c-.14-.24-.01-.37.11-.49.11-.11.24-.3.36-.45.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.16 0-.43.06-.66.31s-.88.86-.88 2.1.9 2.43 1.02 2.6c.13.17 1.74 2.66 4.2 3.72.58.25 1.03.4 1.38.51.58.18 1.1.16 1.5.1.46-.07 1.48-.6 1.69-1.18.21-.57.21-1.06.15-1.18-.06-.12-.22-.18-.47-.3Z"/></svg>
+        <span className="cta-label">Chat on WhatsApp</span>
+      </a>
     </div>
   );
 }

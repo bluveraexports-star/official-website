@@ -522,6 +522,13 @@ main { position: relative; z-index: 1; }
   font-weight: 800;
   box-shadow: var(--shadow);
 }
+.cta-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+.cta-label { display: inline; }
 .float-quote {
   bottom: 90px;
   background: linear-gradient(135deg, #2f7a32 0%, #3a8d3b 100%);
@@ -677,9 +684,25 @@ main { position: relative; z-index: 1; }
     text-align: center;
   }
   .float-quote, .wa-stick {
-    left: 12px;
+    left: auto;
     right: 12px;
+    justify-content: center;
+    min-width: 52px;
+    height: 52px;
+    width: 52px;
+    padding: 0;
+    border-radius: 999px;
+    gap: 0;
     text-align: center;
+  }
+  .float-quote .cta-label,
+  .wa-stick .cta-label {
+    display: none;
+  }
+  .float-quote .cta-icon,
+  .wa-stick .cta-icon {
+    width: 22px;
+    height: 22px;
   }
   .float-quote { bottom: 82px; }
   .wa-stick { bottom: 16px; }
