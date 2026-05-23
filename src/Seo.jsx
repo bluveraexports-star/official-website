@@ -3,20 +3,10 @@ import { Helmet } from 'react-helmet-async';
 
 const siteName = 'Bluvera Exports';
 const siteUrl = 'https://www.bluveraexports.com';
-const canonicalUrl = `${siteUrl}/`;
-const title = 'Bluvera Exports | Global Import & Export Solutions';
-const description = 'Bluvera Exports provides international import and export services with reliable global trade solutions and quality products.';
-const keywords = [
-  'exports',
-  'imports',
-  'international trade',
-  'logistics',
-  'global business',
-  'export services',
-  'import services',
-  'supply chain',
-  'global trade solutions',
-];
+const canonicalUrl = 'https://www.bluveraexports.com';
+const title = 'Bluvera Exports | Premium Ayurvedic Raw Materials Exporter from India';
+const description = 'Bluvera Exports supplies premium Ayurvedic herbs, powders, roots, and extracts from India for pharmaceutical, nutraceutical, cosmetic, and food industries.';
+const keywords = 'Ayurvedic raw materials, Ashwagandha exporter, Herbal exports India, Ayurvedic herbs supplier, Bluvera Exports';
 
 const businessSchema = {
   '@context': 'https://schema.org',
@@ -25,22 +15,15 @@ const businessSchema = {
   url: siteUrl,
   logo: `${siteUrl}/logo.jpg`,
   email: 'bluveraexports@gmail.com',
-  telephone: '+91 97395 41463',
+  telephone: '+91 9739541463',
   address: {
     '@type': 'PostalAddress',
+    addressCountry: 'India',
     streetAddress: 'SF-208, 2nd floor, D Block, Greenaly Signature',
     addressLocality: 'Bengaluru',
     addressRegion: 'Karnataka',
     postalCode: '560076',
-    addressCountry: 'IN',
   },
-};
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: siteName,
-  url: siteUrl,
 };
 
 function Seo() {
@@ -49,7 +32,7 @@ function Seo() {
       <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="author" content={siteName} />
       <meta name="application-name" content={siteName} />
@@ -60,20 +43,17 @@ function Seo() {
       <link rel="apple-touch-icon" href="/logo.jpg" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={siteName} />
+      <meta property="og:description" content="Premium Ayurvedic raw materials exporter from India" />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={`${siteUrl}/hero.jpg`} />
-      <meta property="og:image:alt" content="Bluvera Exports import and export solutions" />
+      <meta property="og:image" content="/logo.jpg" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}/hero.jpg`} />
+      <meta name="twitter:title" content={siteName} />
+      <meta name="twitter:description" content="Premium Ayurvedic raw materials exporter from India" />
+      <meta name="twitter:image" content="/logo.jpg" />
 
       <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
     </Helmet>
   );
 }
