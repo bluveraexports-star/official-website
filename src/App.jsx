@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Seo from './Seo';
 
 const product = {
   name: 'Ashwagandha',
@@ -160,13 +161,14 @@ function App() {
 
   return (
     <div className="page-shell">
+      <Seo />
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
 
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#home" aria-label="Bluvera Exports home">
-            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" />
+            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" fetchPriority="high" decoding="async" />
           </a>
           <button
             className="menu-toggle"
@@ -210,7 +212,7 @@ function App() {
           <div className="hero-visual" ref={heroRef}>
             <div className="product-float product-float-a" />
             <div className="product-float product-float-b" />
-            <img src="/hero.jpg" alt="Ayurvedic herbs" className="hero-image" />
+            <img src="/hero.jpg" alt="Bluvera Exports global import and export solutions" className="hero-image" fetchPriority="high" decoding="async" />
             <div className="hero-badge">Export ready today</div>
           </div>
         </section>
@@ -231,7 +233,7 @@ function App() {
           <div className="cats-grid">
             {categories.map((item, index) => (
               <a className="cat-card image-card" href="#enquiry" key={item.name} style={{ animationDelay: `${index * 90}ms` }}>
-                <img src={item.image} alt={item.name} className="cat-image" />
+                <img src={item.image} alt={item.name} className="cat-image" loading="lazy" decoding="async" />
                 <span>{item.name}</span>
               </a>
             ))}
@@ -240,7 +242,7 @@ function App() {
 
         <section id="about" className={`section container split ${visible.has('about') ? 'is-visible' : ''}`} data-reveal="about">
           <div className="split-media">
-            <img src="/farm.jpg" alt="Herbal farm" />
+            <img src="/farm.jpg" alt="Herbal sourcing farm" loading="lazy" decoding="async" />
           </div>
           <div className="split-copy">
             <div className="section-head left">
@@ -270,7 +272,7 @@ function App() {
             {filteredProduct ? (
               <article className="product-card hover-rise">
                 <div className="product-image-shell">
-                  <img src={filteredProduct.image} alt={filteredProduct.name} />
+                  <img src={filteredProduct.image} alt={filteredProduct.name} loading="lazy" decoding="async" />
                 </div>
                 <h3>{filteredProduct.name}</h3>
                 <p>{filteredProduct.spec}</p>
@@ -300,7 +302,7 @@ function App() {
           <div className="cert-grid">
             {certifications.map((cert) => (
               <article className="cert-card cert-card-image" key={cert.name}>
-                <img src={cert.image} alt={cert.name} />
+                <img src={cert.image} alt={cert.name} loading="lazy" decoding="async" />
                 <h3>{cert.name}</h3>
                 <p>{cert.detail}</p>
               </article>
@@ -354,7 +356,7 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div className="footer-about">
-            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" />
+            <img src="/logo.jpg" alt="Bluvera Exports" className="logo" loading="lazy" decoding="async" />
             <p>Premium supplier of Ayurvedic raw materials from India. Delivering nature's finest to global buyers.</p>
           </div>
           <div className="footer-links">
