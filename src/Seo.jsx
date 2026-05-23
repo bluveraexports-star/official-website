@@ -38,7 +38,6 @@ function Seo() {
       <meta name="application-name" content={siteName} />
       <meta name="theme-color" content="#0c5132" />
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" href="/logo.jpg" sizes="32x32" />
       <link rel="apple-touch-icon" href="/logo.jpg" />
 
